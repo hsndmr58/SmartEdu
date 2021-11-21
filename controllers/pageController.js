@@ -1,4 +1,5 @@
 exports.getIndexPage= (req, res) => {
+    console.log(req.session.userID)
     res.status(200).render('index',{
       page_name:"index"
     })
@@ -16,7 +17,7 @@ exports.getRegisterPage =(req, res) => {
   })
 }
 
-exports.getLoginrPage =(req, res) => {
+exports.getLoginPage =(req, res) => {
   res.status(200).render('login',{
     page_name:"login"
   })
